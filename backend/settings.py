@@ -25,11 +25,12 @@ SECRET_KEY = 'django-insecure-^b=sz8vizke_6wyrtfru78t^%0al03motvm%o4)+a!!b(dqyo4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['readershideout-backend.onrender.com']
 
 CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:5500',
-    'http://localhost:5500'
+    'http://localhost:5500',
+    'https://readershideout-backend.onrender.com',
 ]
 
 # Application definition
