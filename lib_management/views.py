@@ -1,6 +1,5 @@
 from rest_framework import viewsets, status
 from rest_framework.response import Response
-from django.shortcuts import render, get_object_or_404
 from rest_framework.filters import SearchFilter
 from rest_framework.permissions import IsAuthenticated
 from .models import Book, Category, Borrower, Borrowing
@@ -62,22 +61,4 @@ class BorrowingViewSet(viewsets.ModelViewSet):
         return super().partial_update(request, *args, **kwargs)
 
 
-# Frontend Rendering Views
-def index(request):
-    return render(request, 'index.html')
-
-def books(request):
-    return render(request, 'books.html')
-
-def add_book(request):
-    return render(request, 'add-book.html')
-    
-def borrowed(request):
-    return render(request, 'borrowed.html')
-
-def borrow_book(request):
-    return render(request, 'borrow-book.html')
-
-def homepage(request):
-    return render(request, 'homepage.html')
 
